@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 1 - Настройка окружения</title>
+    <title>Lab 2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <h1>Управление задачами (MERN Stack)</h1>
+        <h1>Управление задачами</h1>
 
     </header>
        
         <main class ="main">
              <section id="input-area">
-                  <input class= "input" type="text" id="task-name" placeholder="Наименование задачи...">
-                  <button class="button">+</button>
+                  <input class= "input" type="text" id="task-name" placeholder = "Введите задачу">
+                  <button class="button" id="add-button">+</button>
             
-        </section>
-
+             </section>
+        <div id="error">Пожалуйста, введите название задачи!</div>
 
         <section class="list-area" id="list-area">
             <h2 class="h2">Список текущих дел:</h2>
-            <ul class="task-list">
+            <ul class="task-list" id="task-list">
                  <li>
                      <input type="checkbox" class="checkbox">
                      <span>Установка и настройка Visual Studio Code</span>

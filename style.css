@@ -5,7 +5,6 @@ body {
     min-height: 100vh;
 }
 
-/* Фон фиксируется отдельно */
 body::before {
     content: '';
     position: fixed;
@@ -19,31 +18,52 @@ body::before {
     background-repeat: no-repeat;
     z-index: -1;
 }
+#error {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4d4d;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
 
-.header{
+#error.show {
+    opacity: 1;
+}
 
+.header {
     background-color: #160e52;
     padding: 20px;
     text-align: center;
     color: white;
     font-size: 10px;
-    border-radius: 30px 30px 0 0; 
+    border-radius: 30px 30px 0 0;
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     max-width: 500px;
-    margin: 60px auto;
-    margin-bottom: -50px;
+    width: calc(100% - 40px);
+    height: 80px;
+    margin: 60px auto 0;
+    box-sizing: border-box;
 }
 
 .main {
-    margin-top: 0;
     max-width: 500px;
-    margin: 50px auto;
+    width: calc(100% - 40px);
+    margin: 0 auto 50px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 0 0 30px 30px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-
+    box-sizing: border-box;
 }
+
 #input-area {
     display: flex;
     align-items: center;
@@ -55,35 +75,48 @@ body::before {
 .input {
     flex: 1;
     height: 48px;
-    width: 10px;
+    min-width: 0;
+    width: 100%;
     padding: 0 18px;
     font-size: 16px;
     box-shadow: 0 2px 6px #160e52;
+    
     border-radius: 14px;
     border: none;
     outline: none;
+    box-sizing: border-box;
 }
-input:hover{
+
+input:hover {
     color: #ffffff;
     background-color: #160e52;
     box-shadow: 0 2px 6px #160e52;
 }
 
-  
+input::placeholder {
+    color: #160e52;
+}
+
+input:hover::placeholder {
+    color: #ffffff;
+}
+
 .button {
-    padding: 0; /* убираем лишние отступы */
+    padding: 0;
     width: 45px;
     height: 45px;
+    min-width: 45px;
     background-color: #ffffff;
     box-shadow: 0 2px 6px #160e52;
     border: none;
     color: #160e52;
-    border-radius: 50%; /* делаем кружок */
+    border-radius: 50%;
     cursor: pointer;
     font-size: 35px;
-    line-height: 30px; /* центрируем "x" вертикально */
-    text-align: center; /* центрируем "x" горизонтально */
+    line-height: 30px;
+    text-align: center;
     transition: background 0.2s, transform 0.2s;
+    flex-shrink: 0;
 }
 
 .button:hover {
@@ -94,16 +127,18 @@ input:hover{
 
 .list-area {
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0 0 0;
     background-color: #ffffff;
     border-radius: 30px;
 }
+
 .h2 {
-    text-align:center;
+    text-align: center;
     margin-top: -40px;
     margin-bottom: 15px;
     color: #160e52;
 }
+
 .task-list {
     margin-top: 0;
     list-style-type: none;
@@ -114,17 +149,17 @@ input:hover{
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-left: -20px;
-    width: 468px;
+    margin-left: 0;
+    width: 100%;
     padding: 14px 16px;
     margin-bottom: 12px;
     border-radius: 14px;
     background: white;
     box-shadow: 0 2px 6px #160e52;
     transition: 0.2s ease;
+    box-sizing: border-box;
 }
 
-/* Убираем точку */
 .task-list li::before {
     display: none;
 }
@@ -164,21 +199,22 @@ input:hover{
     margin-left: 0;
 }
 
-/* Одна кнопка для всех */
-.delete-button { 
-    padding: 0; /* убираем лишние отступы, чтобы крестик был по центру */
-    width: 30px; /* фиксируем размер, чтобы круг был ровный */
+.delete-button {
+    padding: 0;
+    width: 30px;
     height: 30px;
+    min-width: 30px;
     background-color: #ffffff;
     box-shadow: 0 2px 6px #160e52;
     border: none;
     color: #ff4d4d;
-    border-radius: 50%; /* делаем кружок */
+    border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
-    line-height: 30px; /* центрируем "x" вертикально */
-    text-align: center; /* центрируем "x" горизонтально */
+    line-height: 30px;
+    text-align: center;
     transition: background 0.2s, transform 0.2s;
+    flex-shrink: 0;
 }
 
 .delete-button:hover {
