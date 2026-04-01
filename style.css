@@ -10,8 +10,7 @@ body {
       #0A0720 100%  
     );
     background-attachment: fixed;
-    /* Добавил шрифт для красоты, если нужен - оставь */
-    font-family: sans-serif; 
+    
 }
 
 #error {
@@ -20,7 +19,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     /* Стеклянный красный фон */
-    background: rgba(255, 77, 77, 0.579);
+    background: rgb(215, 69, 69);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -45,7 +44,7 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: none; /* Убираем нижнюю рамку, чтобы сливалось с main */
+    border-bottom: none; 
     
     padding: 20px;
     text-align: center;
@@ -71,7 +70,7 @@ body {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-top: none; /* Убираем верхнюю рамку, чтобы сливалось с header */
+    border-top: none; 
     
     border-radius: 0 0 30px 30px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -112,7 +111,7 @@ body {
 
 .input::placeholder {
     
-    color: rgba(255, 255, 255, 0.6); /* Полупрозрачный белый плейсхолдер */
+    color: rgba(255, 255, 255, 0.6); 
 }
 
 .input:hover::placeholder {
@@ -150,7 +149,7 @@ body {
 .list-area {
     margin-top: 20px;
     padding: 20px 0 0 0;
-    background: transparent; /* Убрал сплошной цвет, чтобы было видно общее стекло main */
+    background: transparent; /* Прозрачный фон для списка */
     border-radius: 30px;
 }
 
