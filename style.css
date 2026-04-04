@@ -1,35 +1,30 @@
-html, body {
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 100%;
-    background:  #9C92C7 0%;  
-    
 }
-
+ 
+/* ===== FULL PAGE GRADIENT FIX ===== */
+html {
+    min-height: 100%;
+    background: linear-gradient(
+        to top,
+        #9C92C7 0%,
+        #6448A0 40%,
+        #27205F 70%,
+        #0A0720 100%
+    );
+    background-attachment: fixed;
+}
+ 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh;
-    background-color: #9C92C7; /* fallback color matching gradient bottom */
-    background: linear-gradient(
-      to top,
-      #9C92C7 0%,   
-      #6448A0 40%,
-      #27205F 70%,
-      #0A0720 100%  
-    );
-    background-attachment: fixed;
+    background: transparent;
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
 }
-
-body::after {
-    content: '';
-    flex: 1;
-}
-
 #error {
     position: fixed;
     top: -115px;
@@ -277,8 +272,4 @@ body::after {
     background: rgba(210, 10, 10, 0.303);
     color:  #ff4d4d;
     
-}
-footer{  
-    /*background:  #9C92C7 0% ; */
-    background: transparent;
 }
