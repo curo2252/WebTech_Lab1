@@ -1,7 +1,14 @@
 html, body {
-    height: 100%;
     margin: 0;
-   
+    padding: 0;
+    min-height: 100%;
+    background: linear-gradient( 
+        to bottom,
+      #9C92C7 0%,   
+      #6448A0 40%,
+      #27205F 70%,
+      #0A0720 100%  
+    );
 }
 
 body {
@@ -9,7 +16,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh;
-    margin: 0;
     min-height: 100vh;
     background-color: #0A0720;
     background: linear-gradient(
