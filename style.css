@@ -1,14 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
-    background: linear-gradient( 
-        to bottom,
-      #9C92C7 0%,   
-      #6448A0 40%,
-      #27205F 70%,
-      #0A0720 100%  
-    );
+    height: 100%;
+    background:  #9C92C7 0%;  
+    
 }
 
 body {
@@ -16,7 +11,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh;
-    min-height: 100vh;
+    
     background-color: #0A0720;
     background: linear-gradient(
       to top,
@@ -26,6 +21,7 @@ body {
       #0A0720 100%  
     );
     background-attachment: fixed;
+    overflow-x: hidden;
     
 }
 
@@ -278,6 +274,6 @@ body {
     
 }
 footer{  
-    background:  #9C92C7 0% ;  
-
+    /*background:  #9C92C7 0% ; */
+    background: transparent;
 }
