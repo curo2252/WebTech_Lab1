@@ -15,7 +15,7 @@ body {
 
 #error {
     position: fixed;
-    top: -115px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     /* Стеклянный красный фон */
